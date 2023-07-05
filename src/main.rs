@@ -11,9 +11,6 @@ fn main() {
         process::exit(1);
     });
 
-    dbg!(&config.query);
-    dbg!(&config.file_path);
-
     if let Err(e) = rustbook_grep::run(config) {
         println!("Application error: {e}");
         process::exit(1);
